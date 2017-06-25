@@ -1,0 +1,33 @@
+{
+    "name": "vendor/module",
+    "description": "",
+    "type": "magento2-module",
+    "version": "1.0.0",
+    "require": {
+        "php": "~7.0.0|~7.1.0",
+        "magento/framework": "100.1.*"
+    },
+    "require-dev": {
+        "magento/marketplace-eqp": "^1.0",
+        "phpunit/phpunit": "4.1.0",
+        "phpro/grumphp": "^0.9.1"
+    },
+    "autoload": {
+        "psr-4": {
+            "Vendor\\Module\\": ""
+        },
+        "files": [
+            "registration.php"
+        ]
+    },
+    "repositories": [
+        {
+            "type": "composer",
+            "url": "https://repo.magento.com/"
+        },
+        {
+            "type": "git",
+            "url": "https://github.com/magento/marketplace-eqp"
+        }
+    ]
+}

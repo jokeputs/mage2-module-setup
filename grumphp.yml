@@ -1,0 +1,20 @@
+parameters:
+    bin_dir: "src/vendor/bin"
+    tasks:
+        phpcs:
+            standard: "ruleset.xml"
+            show_warnings: false
+            ignore_patterns:
+                - "vendor"
+                - "Test/Unit"
+            triggered_by: [php]
+        phpunit:
+            metadata:
+                priority: 100
+        git_blacklist:
+            keywords:
+                - "die("
+                - "var_dump("
+                - "exit;"
+                - "console.log("
+            triggered_by: [php,js]
