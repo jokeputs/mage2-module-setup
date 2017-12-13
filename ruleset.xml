@@ -4,6 +4,9 @@
 
     <!-- Include the whole PSR-2 standard -->
     <rule ref="PSR2"/>
+    
+    <!-- Need to add this config to make MEQP2 work -->
+    <config name="installed_paths" value="../../../vendor/magento/marketplace-eqp/"/>
 
     <!-- Magento MEQP2 coding standards -->
     <rule ref="MEQP2"/>
